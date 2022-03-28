@@ -1,0 +1,958 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+   
+    
+}
+
+body{
+    color: white;
+    background-color: rgb(36, 33, 33);
+}
+.nav-header{
+    width: 100%;
+    height: 6rem;
+    background-color: black;
+    
+}
+.nav-container{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    
+    
+}
+.menu-list li a{
+    color: white;
+    text-decoration: none;
+}
+.brand{
+    display: flex;
+    align-items: center;
+
+}
+.brand h1{
+    color: rgb(131, 125, 125);
+}
+.brand h1 span{
+    color: rgb(57, 57, 138);
+}
+
+/* ========= media for small phone and tablets=========== */
+@media screen and (max-width: 767px){
+    section{
+        padding: 1.5rem;
+        overflow: hidden;
+    }
+
+    .nav-container{
+        padding: 0 0.5rem;
+    }
+    .menu-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(76px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top:3rem;
+       z-index: 3;
+        row-gap: 3rem;
+        transition: ease 1s;
+    }
+    .show-menu{
+        left: 0;
+    }
+    .menu-container .menu-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin-top: 2rem;
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+    .menu-container .close-btn{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      
+    }
+    .close-btn-font{
+        font-size: 3rem;
+        transition: ease 350ms;
+    }
+    .close-btn-font:hover{
+        cursor: pointer;
+        font-size: 2.9rem;
+    }
+    .social-media i{
+        font-size: 3rem;
+    }
+    .menu-item a{
+        color: white;
+        transition: 0.4s;
+    }
+    .menu-item a:hover{
+        color: blue;
+        cursor: pointer;
+    }
+    .open-btn-font{
+        font-size: 3rem;
+        transition: ease 350ms;
+    }
+    .open-btn-font:hover{
+        cursor: pointer;
+        font-size: 2.9rem;
+    }
+
+    /*================= this section is the first page of the site  */
+
+    .about-author-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-author-container .div1-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .author-px-div .author-px{
+        width: 30rem;
+    }
+    .author-px-div{
+        background-image: radial-gradient(  rgb(109, 103, 103), black);
+        padding: 2rem;
+        border-radius: 50%;
+
+    }
+    .spec-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.4rem;
+    }
+    .spec-container h2{
+        color: rgb(84, 84, 238);
+    }
+    .spec-container p{
+        font-size: 1.5rem;
+    }
+    /* =======================  this is for the second part of the site (our services)========== */
+
+    .services-cobtainer{
+        background-color: white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        color: black;
+        border-radius: 2rem;
+        box-shadow: 0.8rem 0.8rem 0.6rem 0.8rem rgb(68, 68, 173);
+    }
+    .service h2{
+        text-align: center;
+        margin-top: 1.3rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+
+
+    }
+    .service p{
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .service a{
+        background-color: blue;
+        color: white;
+        padding: 0.5rem 1rem;
+      border-radius: 10px;
+      transition: ease-out 0.3s;
+     
+    }
+    .service a:hover{
+        transform: scale(1.098);
+       background-color: rgb(111, 111, 197);
+    }
+    .how-it-work{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .how-it-work .works{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(to right, black, white);
+        color: white;
+        padding: 1rem 0.3rem;
+        border-radius: 10px;
+        transition: transform ease-out 0.3s;
+        box-shadow: 0 0 0.6rem black;
+    }
+    .how-it-work .works:hover{
+        transform: scale(1.06);
+        background-color: black;
+    }
+    /* =======this is for the third part of the site(top-client)========== */
+
+    .top-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+    .top-container h2{
+        text-align: center;
+        font-size: 2rem;
+        background-color: grey;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 50%;
+        box-shadow: 0 0 1rem blue;
+        animation: button 3s infinite;
+
+    }
+    @keyframes button{
+        0%{
+            box-shadow: 0 0 1rem blue; 
+        }
+        50%{
+            box-shadow: 0 0 2rem blue;
+        }
+    }
+    .top-container .top-image img{
+        width: 100%;
+        border-radius: 1rem;
+        transition: ease-in 0.3s;
+    
+    }
+    .top-container .top-image img:hover{
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+
+    /* =============== this is the fourth part of the site(works done) ===================== */
+
+    .work-container h2{
+        text-align: center;
+        font-size: 2rem;
+        background-color: grey;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 50%;
+        box-shadow: 0 0 1rem blue;
+        animation: button 3s infinite;
+    }
+    .work-container{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+       
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+    .cards .card img{
+        width: 100%;
+        border-radius: 2rem;
+    }
+    .cards .card{
+        background-color: rgb(129, 76, 76);
+        border-radius: 2rem 2rem 0 0 ;
+        
+    }
+    .cards .card p{
+        color: white;
+        margin-top: 1.4rem;
+        font-size: 1.5rem;
+    }
+
+    /* ======================for the fifth part of the site(forms)=============== */
+    .form-div input{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        height: 2.5rem;
+        border-radius: 10px;
+        padding-left: 2rem;
+    }
+    .form-container{
+        padding: 1.2rem;
+        background-image: radial-gradient( rgb(115, 194, 115),white);
+        border-radius: 10px;
+    }
+    .form-container h2{
+        color: brown;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .form-container form label{
+        color: black;
+        font-weight: 600;
+    }
+    .form-div{
+        margin-bottom: 1.2rem;
+    }
+    form button{
+        padding: 0.3rem 1rem;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        transition: ease 0.3s;
+    }
+    form button:hover{
+        background-color: green;
+    }
+    .form-container p{
+        font-size: 1.4rem;
+        color: black;
+        margin-bottom: 1rem;
+    }
+
+    /* ==================== anout the second to last of the site ==================== */
+
+    .last-pix-container img{
+        width: 100%;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.4rem;
+       
+        
+        
+        color: white;
+    }
+
+
+    /* ============================ this is the second pahse of the site for mobile view ============================= */
+    .part2-first-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .part2-first-container .part2-photo img{
+        width: 100%;
+    }
+    .part2-first-container h1{
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    .part2-btn a{
+        background-color: blue;
+        padding: 1.2rem 2rem;
+        border-radius: 5px;
+        border-width: 0ch;
+        color: white;
+        margin-top: 4rem;
+        transition: all 0.3s ease;
+    }
+    .part2-btn{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .part2-btn a:hover{
+        background-color: rgb(92, 92, 197);
+    }
+    .part3-first h2{
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+    .part3-secondphase h2{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        margin-top: 2rem;
+        margin-bottom: 1.2rem;
+    }
+    .nft-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+
+    }
+    .nft-container .nft-cards img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .nft-container .nft-cards p{
+        margin-top: 0.5rem;
+        font-size: 1.4rem;
+        color: white;
+
+    }
+    .third-phase-third-part h2{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 1.4rem;
+    }
+    .st-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .st-container .st-card img{
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 0.2rem;
+    }
+    .st-container .st-card p{
+        color: white;
+        font-size: 1.5rem;
+
+    }
+    .third-phase-third-part{
+        margin-bottom: 3rem;
+    }
+    .form-container-phase-4{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .form-div-4 input{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        height: 2.4rem;
+        border-radius: 5px;
+    }
+    .fourth-phase-sec h2{
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .form-div-4{
+        margin-bottom: 1rem;
+    }
+    .phase-4-social-contact h2{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .contact-div{
+        margin-bottom: 1rem;
+
+    }
+    .contact-div p a {
+        font-size: 1.7rem;
+    }
+
+
+
+
+}
+
+
+
+/* ================================ media for laptops and larger ipad ================================== */
+
+@media screen and (min-width: 780px){
+    /* to remove all the uneccessary icons */
+    .social-media{
+        display: none;
+    }
+    .close-btn{
+        display: none;
+    }
+    .open-btn{
+        display: none;
+    }
+    /*  for desktop nav */
+    .nav-header{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .containers{
+        width: 1112px;
+        margin: 0 auto;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+    }
+    .menu-list{
+        display: flex;
+        gap: 1rem;
+
+    }
+    .menu-list .menu-item .menu-link:hover{
+        color: rgb(214, 202, 202);
+        text-decoration: underline;
+        text-decoration-color: rgb(214, 202, 202);
+        text-decoration-thickness: 3px;
+        text-underline-offset: 3px;
+        cursor: pointer;
+    }
+    /* first page of desktop view */
+    .div-all{
+        width: 1112px;
+        margin: 0 auto;
+        padding-top: 2rem;
+    }
+    .about-author-container{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 2rem;
+    }
+    .author-px-div .author-px{
+        width: 100%;
+        animation: first-right 3s ease;
+    }
+    .div1-heading{
+        text-align: center;
+        margin-top: 6rem;
+        font-size: 2.5rem;
+        animation: first-left 3s ease;
+    }
+    .about-author-container:last-child{
+        grid-column: span 4;
+       
+    }
+    .spec-container{
+        display: flex;
+        column-gap: 2rem;
+        padding-top: 4rem;
+       
+    }
+
+    /* this is the third part of the site in laptop */
+    
+
+    .services-section{
+        background-color: white;
+        color: black;
+        padding-bottom: 2rem;
+    }
+    .service .services-header{
+        text-align: center;
+        margin-top: 4rem;
+        font-size: 2.5rem;
+    }
+    .service p{
+        text-align: center;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+   
+   .hire-btn{
+       background-color: blue;
+       color: white;
+       padding: 1.5rem 3rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      
+     
+   }
+   .how-it-work h2{
+       text-align: center;
+       margin-top: 4rem;
+       margin-bottom: 1rem;
+   }
+   .grid{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 2rem;
+       row-gap: 4rem;
+   }
+   .works{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       background-image: linear-gradient(to right, black, white);
+       padding: 2rem;
+       box-shadow: 0.6rem 0.6rem 2rem black;
+       transition: all 0.4s ease;
+   }
+   .works1{
+       animation: works1 5s ease;
+   }
+   .works2{
+       animation: work2 5s ease;
+   }
+   .works3{
+    animation: work3 10s ease;
+    }
+    .works4{
+        animation: work4 10s ease;
+    }
+    .works:hover{
+        transform: scale(1.09);
+    }
+   .works p{
+       color: white;
+       font-size: 1.4rem;
+   }
+
+   /* ============================= the third part of the laptopsite =============================== */
+
+   
+   
+   .top-partners{
+       background-color: grey;
+       padding-bottom: 2rem;
+   }
+   
+   .grid2{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       row-gap: 3rem;
+       margin-bottom: 2rem;
+
+   }
+   .top-container h2{
+       text-align: center;
+    font-size: 3rem;
+   margin-top: 2rem;
+   margin-bottom: 1.5rem;
+    color: black;
+}
+.work-section{
+   background-color: white;
+   padding-bottom: 2rem;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+}
+.work-container h2{
+    color: black;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.3rem;
+}
+.card p{
+   font-size: 1.5rem;
+   margin-top: 0.6rem;
+
+}
+.card img{
+    border-radius: 2rem;
+}
+
+/* the fifth part of the destop site */
+.formall-div{
+    background-color: grey;
+}
+.formsub-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.4rem;
+}
+.form-container h2{
+    color: black;
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+}
+.form-container p{
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+.form-div input{
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+.form-div label{
+    color: black;
+    font-size: 1.2rem;
+}
+.form-btn button{
+    background-color: blue;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    transition: all 0.4s ;
+    border-width: 0ch;
+}
+.form-btn button:hover{
+    background-color: rgb(82, 82, 206);
+    transform: scale(0.98);
+}
+.pencil-div{
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+.last-pix{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+}
+.last-statement{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.last-statement h2{
+    font-size: 2.5rem;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@keyframes first-right{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes first-left{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/*  for works animation */
+
+@keyframes works1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes work2{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes work3{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes work4{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* THIS IS THE SECOND PHASE OF THE SITE, EXPLAINING ABOUT THE OWNER IN DETAILS */
+.part2-first-container{
+    padding: 4rem 1rem;
+}
+.part2-first-heading{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    color: rgb(97, 97, 218);
+    animation: part2-heading 3s ease;
+}
+.part2-photo{
+    text-align: center;
+    animation: part2photo 3s ease;
+}
+.part2-about p{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+
+}
+.part2-btn a{
+    background-color: blue;
+    padding: 1.3rem 2rem;
+    border-radius: 10px;
+    border-width: 0ch;
+    color: white;
+    transition: all  0.4s ease-in;
+}
+.part2-btn a:hover{
+    background-color: rgb(80, 80, 219);
+    transform: scale(0.89);
+}
+.part2-btn{
+    text-align: center;
+}
+/* adding keyframes for the second page of the site */
+@keyframes part2photo{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes part2-heading{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+/* ======= this is the third phase of the site ========= */
+
+.part3-first-sec{
+    background-color: white;
+    color: black;
+    padding: 2rem 2rem;
+}
+.part3-first h2{
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.part3-first .cards .card img{
+    width: 100%;
+}
+.part3-secondphase{
+    background-color: grey;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.nft-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+}
+.nft-container .nft-cards img{
+    width: 100%;
+    border-radius: 10px;
+}
+.nft-container .nft-cards p{
+    font-size: 1.4rem;
+    color: white;
+}
+.part3-secondphase h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: black;
+    font-size: 2.5rem;
+}
+.third-phase-third-part{
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+.third-phase-third-part h2{
+    font-size: 2.5rem;
+    text-align: center;
+    color: black;
+    margin-bottom: 2rem;
+}
+.st-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.st-container img{
+    width: 100%;
+    border-radius: 10px;
+}
+.st-container p{
+    font-size: 1.5rem;
+    color: black;
+}
+.form-container-phase-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+}
+.fourth-phase-sec{
+    background-color: white;
+    color: black;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+}
+.fourth-phase-sec h2{
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+.form-div-4 input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 3rem;
+    border-radius: 10px;
+    padding-left: 2rem;
+
+
+
+}
+.form-div-4{
+    margin-bottom: 1.2rem;
+}
+.form-div-4 label{
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+.contact-div{
+    display: flex;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+}
+.contact-div p a {
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+   
+
+
+}
